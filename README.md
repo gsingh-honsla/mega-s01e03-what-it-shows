@@ -1,6 +1,6 @@
 # What it shows
 
-Public submission for MEGA.dev Challenge S01E03. Prepared by Gurasees Bajaj with Codex. The course accepted the two issue classifications. Final page acceptance is pending.
+Public submission for MEGA.dev Challenge S01E03. Prepared by Gurasees Bajaj with Codex. The course accepted the tickets and signed page on October 28, 2026. Challenge S01E03 is solved. [Course debrief](https://hq.mega.dev/challenges/what-it-shows#debrief).
 
 ## Findings
 
