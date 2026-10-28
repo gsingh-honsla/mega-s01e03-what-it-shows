@@ -1,0 +1,52 @@
+---
+layout: runbook
+title: '#4471 review: two date problems'
+owner: Gurasees Bajaj
+status: proposed
+reviewed: 2026-10-28
+signature: Gurasees Bajaj | MEGA S01E03 | 2026-10-28
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  export let signature = 'Gurasees Bajaj | MEGA S01E03 | 2026-10-28';
+</script>
+
+#4471 contains two distinct problems. Keep one ticket per cause. The original incident prose says one issue and one fix, but its rendered cause table shows a different result.
+
+## What the reports show
+
+<div class="cause-table-wrap">
+  <CauseTable ticket={4471} />
+</div>
+
+The shared parser reads dates month first for day-first tenants. The separate booking-v3 problem displays a month-first hint while parsing the tenant's day-first order. Fixing one does not fix the other.
+
+Tenant locale and actual booking form determine the group. Intake tags are guesses based on browser locale. Count each report ID once, retaining the latest exported row. Do not count overlapping export rows twice.
+
+The five one-day-move desk notes remain in the parser group under the supplied classifier. Their wording warrants follow-up, but it does not prove a third cause.
+
+## When reports arrived and were merged
+
+<QueueTimeline ticket={4471} />
+
+The dates on reports and the dates they were merged answer different questions. The first reports arrived in April, before the July merge wave. Do not date the problem from its merge alone. This export ends October 4. Re-read a fresh export before acting on a later queue.
+
+## Triage from now on
+
+Compare causes using tenant configuration, channel and body evidence. Matching subjects are insufficient. Different subjects can describe the same cause; identical subjects can describe different causes. Missing tenant evidence means investigate before merging.
+
+The triage page and accepted decision 0001 were reviewed June 11, 2024. Their subject-only rule conflicts with the executable examples. Preserve accepted decision 0001 as history and propose a new decision that supersedes it. Update triage only after that decision is accepted.
+
+## Ownership and follow-up
+
+Keep the parser reports on #4471 and give the booking-v3 hint reports a separate ticket. Each issue includes its covered IDs and count. Recompute counts from current data instead of copying this export's counts into living prose. Revisit one-day-move examples separately if further evidence identifies another cause.
+
+<RenderStamp {signature} />
+
+<style>
+  .cause-table-wrap { max-width: 100%; overflow-x: auto; }
+  .cause-table-wrap :global(table) { min-width: 640px; }
+</style>
