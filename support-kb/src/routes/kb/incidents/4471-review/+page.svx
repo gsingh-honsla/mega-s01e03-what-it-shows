@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 review: two date problems'
 owner: Gurasees Bajaj
-status: proposed
+status: resolved
 reviewed: 2026-10-28
 signature: Gurasees Bajaj | MEGA S01E03 | 2026-10-28
 ---
@@ -16,13 +16,13 @@ signature: Gurasees Bajaj | MEGA S01E03 | 2026-10-28
 
 #4471 contains two distinct problems. Keep one ticket per cause. The original incident prose says one issue and one fix, but its rendered cause table shows a different result.
 
-## What the reports show
+## What the October 4 reports showed
 
 <div class="cause-table-wrap">
   <CauseTable ticket={4471} />
 </div>
 
-The shared parser reads dates month first for day-first tenants. The separate booking-v3 problem displays a month-first hint while parsing the tenant's day-first order. Fixing one does not fix the other.
+In this export, the shared parser reads dates month first for day-first tenants. The separate booking-v3 problem displays a month-first hint while parsing the tenant's day-first order. Fixing one does not fix the other.
 
 Tenant locale and actual booking form determine the group. Intake tags are guesses based on browser locale. Count each report ID once, retaining the latest exported row. Do not count overlapping export rows twice.
 
@@ -40,9 +40,16 @@ Compare causes using tenant configuration, channel and body evidence. Matching s
 
 The triage page and accepted decision 0001 were reviewed June 11, 2024. Their subject-only rule conflicts with the executable examples. Preserve accepted decision 0001 as history and propose a new decision that supersedes it. Update triage only after that decision is accepted.
 
-## Ownership and follow-up
+## Resolution recorded by the desk
 
-Keep the parser reports on #4471 and give the booking-v3 hint reports a separate ticket. Each issue includes its covered IDs and count. Recompute counts from current data instead of copying this export's counts into living prose. Revisit one-day-move examples separately if further evidence identifies another cause.
+The course's engineering update records #4471 closed on October 5, 2026. The parser is **fixed**, with the change `fix(dates): parse dd/mm for eu locales`. The hint is **won't fix**, because the booking-v3 form was retired. These are different outcomes. Closing the hint report does not mean its code was fixed.
+
+The two public tracking issues preserve the original coverage and evidence:
+
+- [Parser issue, 379 reports](https://github.com/gsingh-honsla/mega-s01e03-what-it-shows/issues/1), closed as completed after the desk's fix.
+- [Hint issue, 33 reports](https://github.com/gsingh-honsla/mega-s01e03-what-it-shows/issues/2), closed as not planned after the desk retired booking-v3.
+
+The table above is the October 4 snapshot before the desk update and before these tracking issues existed. Its warning describes that exported state. Recompute it from new data when the desk exports another version. Revisit one-day-move examples separately if further evidence identifies another cause.
 
 <RenderStamp {signature} />
 

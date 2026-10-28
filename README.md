@@ -1,6 +1,6 @@
 # What it shows
 
-Proposed public submission for MEGA.dev Challenge S01E03. Prepared by Gurasees Bajaj with Codex. Not submitted or accepted yet.
+Public submission for MEGA.dev Challenge S01E03. Prepared by Gurasees Bajaj with Codex. The course accepted the two issue classifications. Final page acceptance is pending.
 
 ## Findings
 
@@ -30,8 +30,13 @@ The current renderer uses global npm Svelte 5.57.3 and mdsvex 0.12.8, plus Homeb
 
 Run `node render.mjs` from this directory. Open `preview/index.html` in a browser. The renderer writes no public endpoint and does not publish anything.
 
-## Proposed publication
+## Publication and resolution
 
-Create one dedicated public GitHub repository, gsingh-honsla/mega-s01e03-what-it-shows. Publish only this deliverables directory, then create two GitHub issues from the drafts. Do not publish the Personal Orchestration repository, other lessons, private course receipts, sign-in data or unrelated files. Public readers can see the course-provided fictional support data and the author's name. The course only reads the repository. Delete the repository after acceptance if desired.
+Published with Gurasees's approval to [gsingh-honsla/mega-s01e03-what-it-shows](https://github.com/gsingh-honsla/mega-s01e03-what-it-shows). The course accepted both issue classifications, then exposed an engineering update that records #4471 closed October 5, 2026.
 
-Obtain explicit approval before repository creation, push or issue publication. Refresh the course export and recompute before final submission. This draft contains no course acceptance or earned-card claim.
+- [Parser issue #1](https://github.com/gsingh-honsla/mega-s01e03-what-it-shows/issues/1) is closed as completed. The desk fixed the parser with `fix(dates): parse dd/mm for eu locales`.
+- [Hint issue #2](https://github.com/gsingh-honsla/mega-s01e03-what-it-shows/issues/2) is closed as not planned. The desk retired booking-v3 and marked the hint won't fix.
+
+The signed page distinguishes those outcomes and labels the rendered table as the historical October 4 snapshot. The fresh export matched the original SHA-256 exactly before publication.
+
+This dedicated repository contains only the reviewed Challenge package. Public readers can see the course-provided fictional support data and the author's name. The course only reads it. Delete the repository after acceptance if desired.
